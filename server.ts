@@ -36,7 +36,8 @@ const server = http.createServer((req, res) => {
     }
     switch (req.url) {
         case "/": return send_file("./index.html", res);
-        case "/about": return send_file("./about.html", res)
+        case "/assets/icon.png": return send_file("./assets/icon.png", res);
+
         default: res.statusCode = 404; return res.end('<h1 style="text-align:center;padding:100px;">404 Page not found</h1>');
     }
 });
