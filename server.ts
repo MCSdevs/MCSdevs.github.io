@@ -34,9 +34,14 @@ const server = http.createServer((req, res) => {
         res.setHeader('Content-Type', 'text/plain');
         return res.end('Method not implemented');
     }
-    switch (req.url) {
-        case "/": return send_file("./index.html", res);
-        case "/assets/icon.png": return send_file("./assets/icon.png", res);
+    switch (req.url.split("/")[1]) {
+        case "": return send_file("./index.html", res);
+        case "assets":
+            fs.dirreadSync("./assets/").forEach(element => {
+                if (element === req.url.split("/")[2]) {
+                    return send_file(`./assets/${element}`, res);
+                }
+            });
         default: res.statusCode = 404; return res.end('<h1 style="text-align:center;padding:100px;">404 Page not found</h1>');
     }
 });
