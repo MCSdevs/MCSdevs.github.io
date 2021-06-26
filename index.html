@@ -5,15 +5,44 @@
         <link rel="shortcut icon" type="image/jpg" href="/assets/icon.png">
     </head>
     <body>
-        <div class="ti">
-            <h1>PLACEHOLDER</h1>
+        <div class="botlogo">
+            <img id="logo" src="/assets/MCSbotlogo.png" alt="MCS bot">
+        </div>
+        <div id="title" class="ti">
+            <h1>MCS Bot</h1>
         </div>
         <br>
-        <div class="list">
+        <div id="list" class="list">
             <li>PLACEHOLDER</li>
             <li>PLACEHOLDER</li>
             <li>PLACEHOLDER</li>
         </div>
+        <footer>
+            Created by <a href="https://github.com/istditajrz">istditarjz</a>,
+            <a href="https://github.com/denialofres">denialofres</a> and
+            <a href="https://github.com/sammyuri">sammyuri</a>
+        </footer>
+        <script type="text/javascript">
+            document.getElementById("logo").classList.add("fade");
+            document.getElementById("title").classList.add("fade");
+            listelements = document.getElementById("list").children
+            for (i = 0; i < listelements.length; i++) {
+                listelements[i].classList.add("fade-list");
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+                window.setTimeout(function() {
+                    document.getElementById("logo").classList.remove("fade");
+                }, 150);
+                window.setTimeout(function() {
+                    document.getElementById("title").classList.remove("fade");
+                }, 500);
+                for (i = 0; i < listelements.length; i++) {
+                    window.setTimeout(function (i) {
+                        listelements[i].classList.remove("fade-list");
+                    }, 700 + 200 * i, i);
+                }
+            });
+        </script>
     </body>
     <style>
         body {
@@ -23,11 +52,41 @@
             margin: auto;
             background-color: gainsboro;
         }
+        .botlogo {
+            opacity: 1;
+            text-align: center;
+            height: 410px;
+        }
+        .fade {
+            opacity: 0;
+        }
+        .fade-list {
+            opacity: 0;
+            width: 90%;
+        }
+        #logo {
+            transition: opacity 2s;
+        }
         .ti {
             text-align: center;
+            transition: opacity 1s;
         }
         .list {
             text-align: center;
+        }
+        li {
+            width: 100%;
+            transition: all 1s;
+        }
+        a {
+            text-decoration: none;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </html>
