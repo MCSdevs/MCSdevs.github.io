@@ -36,6 +36,7 @@ const server = http.createServer((req, res) => {
     }
     switch (req.url.split("/")[1]) {
         case "": return send_file("./index.html", res);
+        case "/commands": return send_file("./commands.html", res);
         case "assets":
             fs.dirreadSync("./assets/").forEach(element => {
                 if (element === req.url.split("/")[2]) {

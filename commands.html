@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MCSbot</title>
+        <link rel="shortcut icon" type="image/jpg" href="/assets/icon.png">
+    </head>
+    <body>
+        <div class="page-container">
+            <div class="content-wrap">
+                <div id="top-bar">
+                    <div id="top-bar-elements">
+                        <div id="top-bar-left">
+                            <img id="top-bar-logo" src="/assets/topbarlogo.png" alt="MCS bot">
+                        </div>
+                        <div id="top-bar-middle">
+                            <a class="top-bar-link" id="home-link" href="https://mcsdevs.github.io/">Home</a>
+                            <a class="top-bar-link" id="commands-link" href="https://mcsdevs.github.io/commands.html">Commands</a>
+                            <a class="top-bar-link" id="source-link" href="https://github.com/MCSdevs">Source</a>
+                        </div>
+                        <div id="top-bar-right">
+                            <a class="top-bar-link" id="invite-link" href="https://mcsdevs.github.io/">Invite</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-content">
+
+                    <h1>placeholder</h1>
+                    <p>Click on a command to see more details</p>
+
+                    <div id="commands-container">
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">status</p>
+                                <p class="expandable-description-short">Show bot status</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Displays the active cogs, when the bot was started and the uptime.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+status</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">checkpings</p>
+                                <p class="expandable-description-short">Check recent pings</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Displays a list of the 10 most recent times you have been pinged (in order), who pinged you and when. Only logs pings while bot is active.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+checkpings</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">addtask</p>
+                                <p class="expandable-description-short">Set a task for a class</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Select the class (role), the due date and the description of the task. The class gets reminded with a ping the day before it is due.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">/addtask [role] [due date] [description]</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">removetask</p>
+                                <p class="expandable-description-short">Delete a task</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Select the class (role) or leave blank to see all classes. A list of tasks is displayed; you can choose one to delete, or cancel.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">/removetask [role]</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">removealltasks</p>
+                                <p class="expandable-description-short">Delete all tasks for a class</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Select the class (role) or leave blank for all classes. A list of the tasks that will be deleted is displayed. It will ask you for confirmation; if you confirm, all shown tasks will be removed.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">/removealltasks [role]</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">tasklist</p>
+                                <p class="expandable-description-short">View list of tasks for a class</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Select the class (role) or leave blank for all classes. All of that class's tasks will be displayed.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">/tasklist [role]</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">mytasks</p>
+                                <p class="expandable-description-short">View a list of your tasks</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">A list of all tasks for all classes you are in is displayed.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">/mytasks</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">astronaut</p>
+                                <p class="expandable-description-short">Plays "Astronaut in the Ocean"</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Connects to the voice channel you are in and plays "Astronaut in the Ocean". Disconnects when the song is finished.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+astronaut</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">laugh</p>
+                                <p class="expandable-description-short">Laugh</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">The bot laughs.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+laugh</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">roast</p>
+                                <p class="expandable-description-short">Insult another user</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">Selects a random insult and hurls it at the chosen user.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+roast [user]</p>
+                            </div>
+                        </div>
+                        <div class="expandable">
+                            <div class="expandable-top">
+                                <p class="expandable-title">thank</p>
+                                <p class="expandable-description-short">Thank someone</p>
+                            </div>
+                            <div class="expandable-body">
+                                <p class="expandable-description">The bot thanks the user. You can also add "for" and a reason.</p>
+                                <p class="expandable-usage-title">Usage</p>
+                                <p class="expandable-usage">+thank [user] [for reason]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <footer id="footer">
+                <p id="footer-p">
+                    Created by <a class="footer-link" href="https://github.com/istditajrz">istditarjz</a>,
+                    <a class="footer-link" href="https://github.com/denialofres">denialofres</a> and
+                    <a class="footer-link" href="https://github.com/sammyuri">sammyuri</a>
+                    as a part of <a class="footer-link" href="https://github.com/MCSdevs">MCSdevs</a>
+                </p>
+            </footer>
+        </div>
+        <script type="text/javascript">
+        commandbuttons = document.getElementsByClassName("expandable-top");
+        for(var i = 0; i < commandbuttons.length; i++) {
+            commandbuttons[i].onclick = function() {
+                this.classList.toggle("expanded");
+                var shortdescription = this.children[1];
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    shortdescription.style.opacity = 1;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    shortdescription.style.opacity = 0;
+                }
+            }
+        }
+        </script>
+    </body>
+    <style>
+        body {
+            align-items: center;
+            font-family: sans-serif;
+            margin: auto;
+            background-color: gainsboro;
+        }
+        .page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+        .content-wrap {
+            padding-bottom: 50px;
+        }
+        #top-bar {
+            margin: auto;
+            height: 80px;
+            background-color: rgb(32, 32, 32);
+        }
+        #top-bar-elements {
+            width: 80%;
+            margin: auto;
+        }
+        #top-bar-left {
+            float: left;
+        }
+        #top-bar-middle {
+            float: left;
+            padding: 27px 0;
+        }
+        #top-bar-right {
+            float: right;
+            padding: 27px 0;
+        }
+        #top-bar-logo {
+            padding: 3px;
+        }
+        .top-bar-link {
+            text-decoration: none;
+            color: gainsboro;
+            font-size: 24px;
+            line-height: 24px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        .top-bar-link:hover {
+            color: rgb(178, 178, 178);
+        }
+        #page-content {
+            padding-top: 50px;
+        }
+        .footer-link {
+            text-decoration: none;
+        }
+        #footer {
+            position: absolute;
+            bottom: 0;
+            height: 40px;
+            text-align: center;
+            width: 100%;
+            background-color: rgb(178, 178, 178);
+        }
+    
+        .expandable {
+            width: 75%;
+            border-radius: 3px;
+            margin: auto;
+            background-color: rgb(208, 208, 208);
+        }
+        .expandable-top {
+            cursor: pointer;
+            height: 60px;
+            padding: 0px 0;
+            margin-top: 15px;
+        }
+        .expandable-body {
+            border-top: 2px solid gainsboro;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.15s ease-out;
+            text-align: left;
+        }
+        .expandable-title {
+            margin-left: 40px;
+            font-size: 20px;
+            display: inline-block;
+        }
+        .expandable-description-short {
+            display: inline-block;
+            margin-left: 30px;
+            color: rgb(96, 96, 96);
+            opacity: 1;
+            transition: opacity 0.15s ease-out;
+        }
+        .expandable-description {
+            margin: 10px 40px 5px 40px;
+            color: rgb(96, 96, 96);
+        }
+        .expandable-usage-title {
+            display: inline-block;
+            margin: 5px 10px 10px 40px;
+        }
+        .expandable-usage {
+            display: inline-block;
+            margin: 5px 10px 10px 20px;
+            color: rgb(96, 96, 96);
+        }
+    </style>
+</html>

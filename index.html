@@ -5,31 +5,50 @@
         <link rel="shortcut icon" type="image/jpg" href="/assets/icon.png">
     </head>
     <body>
-        <div class="botlogo">
-            <img id="logo" src="/assets/MCSbotlogo.png" alt="MCS bot">
+        <div class="page-container">
+            <div class="content-wrap">
+                <div id="top-bar">
+                    <div id="top-bar-elements">
+                        <div id="top-bar-left">
+                            <img id="top-bar-logo" src="/assets/topbarlogo.png" alt="MCS bot">
+                        </div>
+                        <div id="top-bar-middle">
+                            <a class="top-bar-link" id="home-link" href="https://mcsdevs.github.io/">Home</a>
+                            <a class="top-bar-link" id="commands-link" href="https://mcsdevs.github.io/commands.html">Commands</a>
+                            <a class="top-bar-link" id="source-link" href="https://github.com/MCSdevs">Source</a>
+                        </div>
+                        <div id="top-bar-right">
+                            <a class="top-bar-link" id="invite-link" href="https://mcsdevs.github.io/">Invite</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-content">
+
+                    <div class="bot-logo">
+                        <img id="logo" class="fade" src="/assets/MCSbotlogo.png" alt="MCS bot">
+                    </div>
+                    <div id="title" class="ti fade">
+                        <h1>MCS Bot</h1>
+                    </div>
+                    <br>
+                    <div id="list" class="list">
+                        <li class="fade-list">PLACEHOLDER</li>
+                        <li class="fade-list">PLACEHOLDER</li>
+                        <li class="fade-list">PLACEHOLDER</li>
+                    </div>
+
+                </div>
+            </div>
+            <footer id="footer">
+                <p id="footer-p">
+                    Created by <a class="footer-link" href="https://github.com/istditajrz">istditarjz</a>,
+                    <a class="footer-link" href="https://github.com/denialofres">denialofres</a> and
+                    <a class="footer-link" href="https://github.com/sammyuri">sammyuri</a>
+                    as a part of <a class="footer-link" href="https://github.com/MCSdevs">MCSdevs</a>
+                </p>
+            </footer>
         </div>
-        <div id="title" class="ti">
-            <h1>MCS Bot</h1>
-        </div>
-        <br>
-        <div id="list" class="list">
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-            <li>PLACEHOLDER</li>
-        </div>
-        <footer>
-            Created by <a href="https://github.com/istditajrz">istditarjz</a>,
-            <a href="https://github.com/denialofres">denialofres</a> and
-            <a href="https://github.com/sammyuri">sammyuri</a>
-            as a part of <a href="https://github.com/MCSdevs">MCSdevs</a>
-        </footer>
         <script type="text/javascript">
-            document.getElementById("logo").classList.add("fade");
-            document.getElementById("title").classList.add("fade");
-            listelements = document.getElementById("list").children
-            for (i = 0; i < listelements.length; i++) {
-                listelements[i].classList.add("fade-list");
-            }
             document.addEventListener("DOMContentLoaded", () => {
                 window.setTimeout(function() {
                     document.getElementById("logo").classList.remove("fade");
@@ -37,6 +56,7 @@
                 window.setTimeout(function() {
                     document.getElementById("title").classList.remove("fade");
                 }, 500);
+                listelements = document.getElementById("list").children
                 for (i = 0; i < listelements.length; i++) {
                     window.setTimeout(function (i) {
                         listelements[i].classList.remove("fade-list");
@@ -47,13 +67,69 @@
     </body>
     <style>
         body {
-            padding-top: 50px;
             align-items: center;
             font-family: sans-serif;
             margin: auto;
             background-color: gainsboro;
         }
-        .botlogo {
+        .page-container {
+            position: relative;
+            min-height: 100vh;
+        }
+        .content-wrap {
+            padding-bottom: 50px;
+        }
+        #top-bar {
+            margin: auto;
+            height: 80px;
+            background-color: rgb(32, 32, 32);
+        }
+        #top-bar-elements {
+            width: 80%;
+            margin: auto;
+        }
+        #top-bar-left {
+            float: left;
+        }
+        #top-bar-middle {
+            float: left;
+            padding: 27px 0;
+        }
+        #top-bar-right {
+            float: right;
+            padding: 27px 0;
+        }
+        #top-bar-logo {
+            padding: 3px;
+        }
+        .top-bar-link {
+            text-decoration: none;
+            color: gainsboro;
+            font-size: 24px;
+            line-height: 24px;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        .top-bar-link:hover {
+            color: rgb(178, 178, 178);
+        }
+        #page-content {
+            padding-top: 50px;
+        }
+        .footer-link {
+            text-decoration: none;
+        }
+        #footer {
+            position: absolute;
+            bottom: 0;
+            height: 40px;
+            text-align: center;
+            width: 100%;
+            background-color: rgb(178, 178, 178);
+        }
+
+
+        .bot-logo {
             opacity: 1;
             text-align: center;
             height: 410px;
@@ -78,16 +154,6 @@
         li {
             width: 100%;
             transition: all 1s;
-        }
-        a {
-            text-decoration: none;
-        }
-        footer {
-            position: absolute;
-            bottom: 0;
-            padding-bottom: 10px;
-            text-align: center;
-            width: 100%;
         }
     </style>
 </html>

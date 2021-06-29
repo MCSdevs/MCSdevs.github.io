@@ -33,6 +33,7 @@ var server = http.createServer(function (req, res) {
     }
     switch (req.url.split("/")[1]) {
         case "": return send_file("./index.html", res);
+        case "/commands": return send_file("./commands.html", res);
         case "assets":
             fs.dirreadSync("./assets/").forEach(function (element) {
                 if (element === req.url.split("/")[2]) {
